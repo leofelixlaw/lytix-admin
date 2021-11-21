@@ -11,7 +11,7 @@ import { fadeInAnimation } from '../../../data/router-animation/router-animation
   styleUrls: ['./content.component.scss'],
   animations: [fadeInAnimation]
 })
-export class ContentComponent implements OnInit, AfterViewInit {
+export class ContentComponent implements OnInit{
   
   constructor(private route: ActivatedRoute, public navServices: NavService, 
     public layout: LayoutService) {
@@ -19,13 +19,6 @@ export class ContentComponent implements OnInit, AfterViewInit {
         this.layout.config.settings.layout = params.layout ? params.layout : this.layout.config.settings.layout
       })
   }
-    
-  ngAfterViewInit() {
-    setTimeout(() => {
-      feather.replace();
-    });
-  }
-
   public getRouterOutletState(outlet) {
     return outlet.isActivated ? outlet.activatedRoute : '';
   }

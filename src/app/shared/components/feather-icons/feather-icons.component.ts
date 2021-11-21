@@ -13,9 +13,7 @@ export class FeatherIconsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    setTimeout(() => {
-      feather.replace();
-    });
+    feather.replace();
   }
 
 }

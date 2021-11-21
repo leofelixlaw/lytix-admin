@@ -10,7 +10,7 @@ export const fadeInAnimation = trigger('fadeInAnimation', [
                 left: 0,
                 width: '100%'
             })
-        ]),
+        ], { optional: true }),
         query(':enter', [style({ opacity: '0' })], { optional: true }),
         query(':leave', animateChild(), { optional: true }),
         group([
